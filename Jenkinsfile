@@ -13,6 +13,7 @@ pipeline {
 
     stage('Code Linting') {
       steps {
+        sh 'npm install eslint --save-dev'
         sh 'npm test'
       }
     }
