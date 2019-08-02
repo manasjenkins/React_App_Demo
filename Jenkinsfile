@@ -7,7 +7,7 @@ pipeline {
         
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/manas82/David_task.git'
+        git 'https://github.com/manas82/Web-App-Demo.git'
       }
     }
 
