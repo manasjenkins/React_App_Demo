@@ -19,7 +19,7 @@ stage('Install EsLint') {
 
     stage('Code Linting') {
       steps {
-        sh 'npm test a'
+        sh 'npm test'
       }
     }
      
