@@ -7,7 +7,7 @@ pipeline {
         
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/manas82/Web-App-Demo.git'
+        git 'https://github.com/manasjenkins/React_App_Demo.git'
       }
     }
 
