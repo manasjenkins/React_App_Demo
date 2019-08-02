@@ -11,7 +11,7 @@ pipeline {
       }
     }
 
-    stage('Code Linting') {
+    stage('eslint') {
       steps {
         sh 'npm install eslint --save-dev'
         sh 'npm test'
@@ -36,7 +36,7 @@ pipeline {
       }
     }
 
-    stage('Building Build Package') {
+    stage('Building Package') {
       steps {
         sh 'npm run-script build'
       }
