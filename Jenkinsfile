@@ -14,8 +14,8 @@ pipeline {
 stage('Install EsLint') {
       steps {
         sh 'npm install --save-dev eslint eslint-config-strongloop'
-        sh 'npm install -g eslint'
-        sh 'eslint --init'
+        sh 'npm install eslint --save-dev'
+        sh './node_modules/.bin/eslint --init'
       }
     }
 
