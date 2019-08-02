@@ -44,7 +44,7 @@ pipeline {
     
     stage('Building Docker container') {
       steps {
-        sh 'docker build -t manasapp"$BUILD_NUMBER"/manasmc:latest .'
+        sh 'docker build -t react-web-app"$BUILD_NUMBER"/manasmc:latest .'
      }
     }
 
@@ -66,7 +66,7 @@ pipeline {
     }
     stage('Testing App') {
       steps {
-        sh 'docker run  -d -p 8020:80 --name webapptest"$BUILD_NUMBER" manasapp"$BUILD_NUMBER"/manasmc:latest'
+        sh 'docker run  -d -p 8020:80 --name react-web-app"$BUILD_NUMBER" react-web-app"$BUILD_NUMBER"/manasmc:latest'
         sh 'wget http://localhost:8020/'
      }
      
@@ -74,8 +74,8 @@ pipeline {
     
     stage('Cleaning Testing Env') {
       steps {
-        sh 'docker container stop webapptest"$BUILD_NUMBER"'
-        sh 'docker container rm webapptest"$BUILD_NUMBER"'
+        sh 'docker container stop react-web-app"$BUILD_NUMBER"'
+        sh 'docker container rm react-web-app"$BUILD_NUMBER"'
      }
     }
     
