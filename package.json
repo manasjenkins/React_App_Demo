@@ -8,10 +8,10 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "pretest": "eslint --ignore-path .gitignore ",
+    "pretest": "eslint --ignore-path .gitignore .",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "CI=true react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -28,5 +28,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.14.3"
   }
 }
