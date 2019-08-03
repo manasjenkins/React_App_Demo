@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './manas.png';
-import './App.css';
+import '/App.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className='App-header'>
+        <img src={logo} className="App-logo"></img>
         <p>
           Edit <code>src/App.js</code> will reload automatically - COOL!.
         </p>
@@ -20,7 +20,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
 export default App;
